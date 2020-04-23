@@ -15,18 +15,18 @@ enum Mark{
 
 class Tile{
 
-    int posX;
-    int posY;
+    int posX = 0;
+    int posY = 0;
 
-    int width;
-    int height;
+    int width = 0;
+    int height = 0;
 
     Mark state = UNSET; // 'x', 'o', '-'
 
     sf::Color color = sf::Color(120, 120, 120);
 
     sf::RectangleShape shape;
-    sf::CircleShape* mark = nullptr;
+    sf::Shape* mark = nullptr;
 
 public:
     Tile() = default;

@@ -55,19 +55,17 @@ void Tile::setState(Mark newState){
 
     state = newState;
 
-    mark = new sf::CircleShape(height / 2.4);
-
-    mark -> setOrigin(height / 2, height / 2.4);
-    mark -> setPosition(posX + width / 2, posY + height / 2);
-    mark -> setFillColor(sf::Color(120, 120, 120, 0));
-
     if(state == Mark::O) {
-        mark -> setOutlineThickness(12);
+        mark = new sf::CircleShape(height / 2.4);
         mark -> setOutlineColor(sf::Color(60, 210, 60));
     }else if(state == Mark::X){
-        mark -> setOutlineThickness(12);
+        mark = new sf::RectangleShape(sf::Vector2f(height / 1.5, height / 1.5));
         mark -> setOutlineColor(sf::Color(210, 60, 60));
     }
+    mark -> setFillColor(sf::Color(120, 120, 120, 0));
+    mark -> setOrigin(height / 2, height / 2.4);
+    mark -> setPosition(posX + width / 2, posY + height / 2);
+    mark -> setOutlineThickness(12);
 }
 
 void Tile::draw(sf::RenderWindow* win){
