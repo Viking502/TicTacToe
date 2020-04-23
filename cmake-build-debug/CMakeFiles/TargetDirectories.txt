@@ -1,3 +1,0 @@
-/home/viking/programingStuff/SFML/TicTacToe/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/viking/programingStuff/SFML/TicTacToe/cmake-build-debug/CMakeFiles/TicTacToe.dir
-/home/viking/programingStuff/SFML/TicTacToe/cmake-build-debug/CMakeFiles/edit_cache.dir
