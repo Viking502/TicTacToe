@@ -465,7 +465,8 @@ public:
                 }else{
                     std::cout << "___ Draw ___\n";
                 }
-
+//                std::getchar();
+                sf::sleep(sf::seconds(1));
                 window.close();
             }
         }
