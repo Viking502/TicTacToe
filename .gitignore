@@ -1,0 +1,2 @@
+#ignore CMake files
+cmake-build-debug
