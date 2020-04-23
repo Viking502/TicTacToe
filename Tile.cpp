@@ -59,7 +59,7 @@ void Tile::setState(Mark newState){
 
     mark -> setOrigin(height / 2, height / 2.4);
     mark -> setPosition(posX + width / 2, posY + height / 2);
-    mark -> setFillColor(sf::Color(120, 120, 120));
+    mark -> setFillColor(sf::Color(120, 120, 120, 0));
 
     if(state == Mark::O) {
         mark -> setOutlineThickness(12);
