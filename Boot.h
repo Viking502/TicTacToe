@@ -9,6 +9,9 @@
 #include "Tile.h"
 #include "Player.h"
 
+//#define SHOW_POSSIBLE_WINS
+//#define SHOW_SCORES
+
 class Boot :public Player{
 
 public:

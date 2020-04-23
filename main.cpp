@@ -6,8 +6,6 @@
 #import "Player.h"
 #import "Boot.h"
 #include "Game.h"
-//#define SHOW_POSSIBLE_WINS
-//#define SHOW_SCORES
 
 
 int main() {

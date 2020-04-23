@@ -2,6 +2,7 @@
 // Created by viking on 23.04.20.
 //
 
+#include <iostream>
 #include "Boot.h"
 
 Mark minimaxBoot::testJudge(Mark field[3][3]){
