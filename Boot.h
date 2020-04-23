@@ -14,7 +14,7 @@ class Boot :public Player{
 public:
     Boot() = default;
 
-    Boot(Mark marker): Player(marker){}
+    explicit Boot(Mark marker): Player(marker){}
 
     virtual inline sf::Vector2i makeMove(){}
 
@@ -25,8 +25,8 @@ class randomBoot :public Boot{
 public:
     randomBoot(Mark marker) :Boot(marker){}
 
-    inline sf::Vector2i makeMove(){
-        return sf::Vector2i(std::experimental::randint(0, 2), std::experimental::randint(0, 2));
+    inline sf::Vector2i makeMove() override{
+        return {std::experimental::randint(0, 2), std::experimental::randint(0, 2)};
     }
 };
 
@@ -38,7 +38,7 @@ class minimaxBoot :public Boot{
     int minimax(Mark tile[3][3], Mark currSide, sf::Vector2i prev, int deep);
 
 public:
-    minimaxBoot(Mark marker, short lvl = 9): Boot(marker), level(lvl){}
+    explicit minimaxBoot(Mark marker, short lvl = 9): Boot(marker), level(lvl){}
 
     sf::Vector2i makeMove(Tile field[3][3]);
 };
