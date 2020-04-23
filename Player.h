@@ -11,7 +11,7 @@ protected:
     Mark side;
 
 public:
-    Player(Mark pSide): side(pSide){}
+    explicit Player(Mark pSide): side(pSide){}
 
     Player() = default;
 
