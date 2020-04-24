@@ -1,8 +1,6 @@
 # TicTacToe
 TicTacToe game in c++ and SFML and implementet minimax based bots
 
-![Screenshot](Screenshot.png)
-
 ### Flags
 `#define SHOW_SCORES`
 
@@ -37,5 +35,9 @@ O X O
 
 X O X 
 ```
+
+![Screenshot](Screenshot.png)
+
+![Screenshot](Screen_end_game.png)
 font from: 
 http://www.knackpack.studio/freebies.html
