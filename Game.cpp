@@ -130,7 +130,7 @@ void Game::start(){
             std::string translate[3] = {"Draw!  ", "O wins!", "X wins!"};
 
             sf::Font font{};
-            if(font.loadFromFile("./rushbrush.ttf")){
+            if(font.loadFromFile("../rushbrush.ttf")){
                 sf::Text temp{};
                 temp.setFont(font);
                 temp.setPosition(windowSize[0] / 4, windowSize[1] / 4);
