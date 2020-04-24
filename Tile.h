@@ -6,6 +6,7 @@
 #define TICTACTOE_TILE_H
 
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 enum Mark{
     UNSET = 0,
@@ -26,15 +27,21 @@ class Tile{
     sf::Color color = sf::Color(120, 120, 120);
 
     sf::RectangleShape shape;
-    sf::Shape* mark = nullptr;
+
+    sf::Font font;
+    sf::Text mark;
 
 public:
-    Tile() = default;
+    Tile(){
+        if(!font.loadFromFile("../rushbrush.ttf")){
+            std::cout<<"can't load font from file\n";
+        }else{
+            mark.setFont(font);
+        }
+        mark.setCharacterSize(160);
+    };
 
-    ~Tile(){
-        delete mark;
-        mark = nullptr;
-    }
+    ~Tile() = default;
 
     void create(int x, int y, int dx, int dy);
 

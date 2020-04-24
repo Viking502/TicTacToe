@@ -126,15 +126,25 @@ void Game::start(){
         window.display();
 
         if(winner != Mark::UNSET || tourCounter >= 9){
-            char temp;
-            if(winner == Mark::O){
-                std::cout << "=== O wins ===\n";
-            }else if(winner == Mark::X){
-                std::cout << "=== X wins ===\n";
+
+            std::string translate[3] = {"Draw!  ", "O wins!", "X wins!"};
+
+            sf::Font font{};
+            if(font.loadFromFile("../rushbrush.ttf")){
+                sf::Text temp{};
+                temp.setFont(font);
+                temp.setPosition(windowSize[0] / 4, windowSize[1] / 4);
+                temp.setCharacterSize(260);
+                temp.setFillColor(sf::Color::Yellow);
+                temp.setString(translate[winner]);
+
+                window.draw(temp);
+                window.display();
             }else{
-                std::cout << "___ Draw ___\n";
+                std::cout << "===============\n";
+                std::cout << "=== " << translate[winner] << " ===" << "\n";
+                std::cout << "===============\n";
             }
-//                std::getchar();
             sf::sleep(sf::seconds(1));
             window.close();
         }
