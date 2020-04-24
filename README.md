@@ -36,8 +36,8 @@ O X O
 X O X 
 ```
 
-![Screenshot](Screenshot.png)
+![Screenshot](screenshot.png)
 
-![Screenshot](Screen_end_game.png)
+![Screenshot](screen_end_game.png)
 font from: 
 http://www.knackpack.studio/freebies.html
